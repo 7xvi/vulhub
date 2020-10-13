@@ -15,3 +15,4 @@ COPY --from=builder /usr/src/etc/ /etc/cas/
 
 RUN set -ex \
     && sed -i 's/securerandom\.source=file:\/dev\/random/securerandom.source=file:\/dev\/.\/urandom/g' $JAVA_HOME/jre/lib/security/java.security
+    #
